@@ -47,7 +47,7 @@ console.log('Vardas:', vardas, 'jis gyveno;', metai, 'metais');
 const pirmasSkaicius = 10
 const antrasSkaicius = 5
 
-const suma = pirmasSkaicius + antrasSkaicius
+const suma = pirmasSkaicius + antrasSkaicius;
 console.log(suma);
 console.log(pirmasSkaicius, '+', antrasSkaicius, '=', suma);
 
