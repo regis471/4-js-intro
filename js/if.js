@@ -39,8 +39,53 @@ if (spalva === 'melyna' ){
 }else {
     console.log('nei tokia nei tokia');
 }
+
+console.log('------------');
     
+const moneta = 'dingo';
+
+if (moneta==='skaicius') {
+    console.log('iskrito skaicius');
+} else if (moneta==='herbas') {
+    console.log('iskrito herbas');
+} else {
+    if (moneta==='briauna') {
+    console.log('nukrito ant briaunos');
+    } else {
+        if (moneta==='pavoge'){
+            console.log('moneta pavoge');
+        } else {
+            console.log('vis dar ore');
+        }
+
+        
+    }
+}
 
 
+console.log('------------');
+
+const namoTipas = 'butas';      //namas, butas
+const kilti = 'laiptai';        //laiptai, liftas
 
 
+if (namoTipas === 'namas') {
+    if (kilti === 'laiptai') {
+        console.log('Ieinu i nama, kylu laiptais');
+    } else if (kilti==='liftas') {
+        console.log('Ieinu i nama, kylu liftu');
+    } else {
+        console.log('Ieinu i nama, nekylu nes nera kuo');
+    }
+
+} else if (namoTipas === 'butas' ) {
+    if (kilti ==='liftas') {
+        console.log('Ieinu i daugiauauskti ir kylu liftu');
+    }else if (kilti==='laiptai') {
+        console.log('Ieinu i daugiauauksti ir lipu laiptais');
+    }else {
+        console.log("Ieinu i daugiauauksti ir nera kuo kilti");
+    }
+} else {
+    console.log("namo tipas nezinomas");
+}
