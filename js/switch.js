@@ -85,3 +85,4 @@ switch (stotele){
     default:
         console.log('Tokios stoteles nera');
 }
+
