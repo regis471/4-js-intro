@@ -33,6 +33,11 @@ let reverseText = '';
 // }
 
 
+
+const text = 'abcdef';
+const size = text.length;
+let reverseText = '';
+
 for (let i = size - 1; i >= 0; i--) {
     const letter = text[i];
     reverseText += letter;
