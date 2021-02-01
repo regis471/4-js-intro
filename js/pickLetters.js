@@ -26,25 +26,43 @@ function pickLetters(text, step){
     //logic
     let picker = '';
 
-    for (let i=0; i < text.length; i++) {
-        const letter = text[i];
-
-        if (i % step === 1) {
-            picker += letter;
+    if (step > 0){
+        for (let i = step - 1; i < text.length; i += step){
+            picker += text[i];
         }
-
+    }else {
+        for (let i = text.length + step; i >= 0; i += step){
+            picker += text[i];
     }
+    
+    // for (let i = step - 1; i < text.length; i += step) {
+    //     picker += text[i] ;
+    // }
+
+
+    // for (let i=0; i < text.length; i++) {
+    //     const letter = text[i];
+
+    //     if (i % step === step - 1) {
+    //         picker += letter;
+    //     }
+
+    // }
 
     //post logic validation
-
+    
+    if (picker === '') {
+        return 'ERROR: nenumatyta logine klaida';
+    }
 
     // return result
     return picker;
 }
-
+}
 console.log( pickLetters('abcdefg', 2), '->', 'bdf' );
 console.log( pickLetters('Labasrytas', 2), '->', 'aarts' );
 console.log( pickLetters('abcdefghijkl', 3), '->', 'cfil' );
+console.log( pickLetters('abcdefghijkl', 1), '->', 'abcdefghijkl' );
 console.log( pickLetters('abc', 0 ));
 console.log( pickLetters('abc', 4 ));
 console.log( pickLetters(1561, 2 ));
@@ -53,9 +71,9 @@ console.log( pickLetters('Labas', NaN ));
 console.log( pickLetters('Labas', -Infinity ));
 console.log( pickLetters('abc', 3 ), '->', 'c');
 
-console.log( pickLetters('abcdefg', -1), '->', '' );
-console.log( pickLetters('abcdefg', -2), '->', '' );
-console.log( pickLetters('abcdefghijkl', -3), '->', '' );
+console.log( pickLetters('abcdefg', -1), '->', 'gfedcba' );
+console.log( pickLetters('abcdefg', -2), '->', 'fdb' );
+console.log( pickLetters('abcdefghijkl', -3), '->', 'jgda' );
 console.log( pickLetters('abc', -3 ));
 console.log( pickLetters('abc', 1.5 ));
 console.log( pickLetters('', 10));
@@ -67,12 +85,9 @@ console.log( pickLetters('', 10));
 
 
 
-/*
-
-1 b
-3 d         3 % step(2) = 1
-5 f         5 % step(2) = 1
 
 
+// 1 b         1% step(2) = 1
+// 3 d         3 % step(2) = 1
+// 5 f         5 % step(2) = 1
 
-*/
